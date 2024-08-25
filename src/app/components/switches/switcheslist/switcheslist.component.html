@@ -1,0 +1,58 @@
+<div class="table-container">
+    <div class="mb-3">
+        <mdb-form-control>
+            <input mdbInput type="text" id="typeText" class="form-control" [(ngModel)]="query" (keydown.enter)="recebeQuery(query)" />
+            <label mdbLabel class="form-label" for="typeText">Busque por (Registro, Data, Hora, Hostname, Modelo...)</label>
+          </mdb-form-control>
+    </div>
+  
+    <div class="card">
+      
+      <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+  
+      <p-table
+        *ngIf="!isLoading"
+        [value]="switchesList"
+        [paginator]="true"
+        [rows]="10"
+        [first]="first"
+        [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        (onPage)="pageChange($event)"
+        [rowsPerPageOptions]="[10, 25, 50, 100, 200]"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="title">Registro</th>
+            <th class="title">Data</th>
+            <th class="title">Hora</th>
+            <th class="title">Hostname</th>
+            <th class="title">IP Address</th>
+            <th class="title">MAC Address</th>
+            <th class="title">Marca</th>
+            <th class="title">Modelo</th>
+            <th class="title">Num Serie</th>
+            <th class="title">Versão</th>
+            <th class="title">Imobilizado</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-switch>
+          <tr>
+            <td>{{ switch.registro }}</td>
+            <td>{{ switch.data | date: 'shortDate' }}</td>
+            <td>{{ switch.hora }}</td>
+            <td>{{ switch.hostname }}</td>
+            <td>{{ switch.ip_address }}</td>
+            <td>{{ switch.mac_address }}</td>
+            <td>{{ switch.marca }}</td>
+            <td>{{ switch.modelo }}</td>
+            <td>{{ switch.num_serie }}</td>
+            <td>{{ switch.versao }}</td>
+            <td>{{ switch.imobilizado }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  

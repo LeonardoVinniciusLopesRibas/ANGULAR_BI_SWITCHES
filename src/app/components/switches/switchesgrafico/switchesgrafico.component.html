@@ -1,0 +1,10 @@
+<div class="chart-container">
+    <div class="card">
+    <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+    <div class="chart-item">
+        
+      <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+    </div>
+    </div>
+  </div>
+  
