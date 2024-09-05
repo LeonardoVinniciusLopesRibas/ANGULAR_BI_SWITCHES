@@ -1,8 +1,89 @@
 .chart-container {
-    gap: 8px; 
-    margin-left: 300px;
-    align-items: center;
-    margin-top: 10%;
-    padding: 10%;
+    width: 200px;
+    
+    height: 200px;
+  }
+
+  .chart-item{
+    width: 900px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 20px;
+    box-shadow: 0px 15px 15px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container-flex{
+    display: flex;
+  }
+
+  .card{
+    margin-top: 100px;
+    margin-left: 290px;
+    margin-right: 290px;
+    width: 5700px;
+    height: auto;
+    padding: 25px;
+    box-shadow: 0px 15px 15px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .label{
+    display: grid;
+    place-items: center;
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  p-calendar {
+    margin-right: 10px;
+    box-shadow: 0px 15px 15px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    width: 150px;
+    
+  }
+  
+  ::ng-deep .p-calendar {
+    background-color: white !important;
+    border: 1px solid #ccc !important;
+    color: black !important;
+    width: 150px;
+  }
+  
+  ::ng-deep .p-datepicker {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    width: 150px;
+  }
+  
+  ::ng-deep .p-datepicker-header {
+    background-color: #f4f4f4 !important;
+    color: black !important;
+    width: 150px;
+  }
+  
+  ::ng-deep .p-datepicker-calendar td {
+    color: black !important;
+    width: 150px;
+  }
+  
+  ::ng-deep .p-datepicker-calendar td.p-datepicker-today a {
+    background-color: #f4f4f4 !important;
+    color: black !important;
+    width: 150px;
+  }
+  
+
+  ::ng-deep .p-datepicker {
+    width: 250px !important; /* Aumenta a largura */
+    height: auto !important; /* Ajusta a altura automaticamente */
+  }
+  
+  ::ng-deep .p-calendar {
+    width: 250px !important; /* Aumenta a largura */
+    height: auto !important; /* Ajusta a altura automaticamente */
   }
   

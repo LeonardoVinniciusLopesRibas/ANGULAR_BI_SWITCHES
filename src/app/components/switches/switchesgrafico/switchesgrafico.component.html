@@ -1,10 +1,406 @@
 <div class="chart-container">
-    <div class="card">
-    <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
-    <div class="chart-item">
-        
-      <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
-    </div>
+
+
+
+
+  <div class="card">
+    <div class="container-grafico">
+      <div style="display: flex;">
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Marca</label>
+              <p-chart type="bar" [data]="marcaData" [options]="marcaOptions"></p-chart>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Marca</label>
+              <p-chart type="pie" [data]="marcaData" [options]="marcaOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Marca</label>
+              <p-chart type="doughnut" [data]="marcaData" [options]="marcaOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Marca</label>
+              <p-chart type="line" [data]="marcaData" [options]="marcaOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Marca</label>
+              <p-chart type="polarArea" [data]="marcaData" [options]="marcaOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Marca</label>
+              <p-chart type="radar" [data]="marcaData" [options]="marcaOptions" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+
+
+
+
+
+  <div class="card">
+    <div class="container-grafico">
+      <div style="display: flex;">
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="bar" [data]="mmodeloData" [options]="modeloOptions"></p-chart>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="pie" [data]="mmodeloData" [options]="modeloOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="doughnut" [data]="mmodeloData" [options]="modeloOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="line" [data]="mmodeloData" [options]="modeloOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="polarArea" [data]="mmodeloData" [options]="modeloOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="radar" [data]="mmodeloData" [options]="modeloOptions" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="card">
+    <div class="container-grafico">
+      <div style="display: flex;">
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Hostname</label>
+              <p-chart type="bar" [data]="hostnameData" [options]="hostnameOptions"></p-chart>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Hostname</label>
+              <p-chart type="pie" [data]="hostnameData" [options]="hostnameOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Hostname</label>
+              <p-chart type="doughnut" [data]="hostnameData" [options]="hostnameOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Hostname</label>
+              <p-chart type="line" [data]="hostnameData" [options]="hostnameOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Hostname</label>
+              <p-chart type="polarArea" [data]="hostnameData" [options]="hostnameOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Hostname</label>
+              <p-chart type="radar" [data]="hostnameData" [options]="hostnameOptions" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="card">
+    <div class="container-grafico">
+      <div style="display: flex;">
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Imobilizado</label>
+              <p-chart type="bar" [data]="imobilizadoData" [options]="imobilizadoOptions"></p-chart>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="pie" [data]="imobilizadoData" [options]="imobilizadoOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="doughnut" [data]="imobilizadoData" [options]="imobilizadoOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="line" [data]="imobilizadoData" [options]="imobilizadoOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="polarArea" [data]="imobilizadoData" [options]="imobilizadoOptions" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p-progressSpinner *ngIf="isLoading" ariaLabel="Loading"></p-progressSpinner>
+          <div class="filter-container">
+            <p-calendar [(ngModel)]="startDate" placeholder="Data Início" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+            <p-calendar [(ngModel)]="endDate" placeholder="Data Fim" dateFormat="dd/mm/yy"
+              (onSelect)="onDateChange()"></p-calendar>
+          </div>
+          <div class="container-flex">
+            <div class="chart-item">
+              <label class="label">Switches por Modelo</label>
+              <p-chart type="radar" [data]="imobilizadoData" [options]="imobilizadoOptions" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
